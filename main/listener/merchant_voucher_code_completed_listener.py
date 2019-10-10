@@ -14,7 +14,7 @@ class MerchantVoucherCodeCreatedListener(Listener):
 
     def get_binding(self):
         return Binding(
-            queue_name='merchant_voucher_completed_code',
+            queue_name='merchant_voucher_code.completed.worker_game_replication',
             routing_key='merchant.voucher.voucher_code_completed',
             exchange='event')
 
