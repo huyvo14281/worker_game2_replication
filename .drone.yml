@@ -1,9 +1,9 @@
 kind: pipeline
 name: default
-
+type: docker
 steps:
 - name: test
-  image: python
+  image: worker-game-replication
   commands:
-  - pip install -r requirements.txt
-  - pytest
+    - pip3 install -r requirement.txt
+    - python3 ./main/main.py
