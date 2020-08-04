@@ -1,16 +1,16 @@
 kind: pipeline
-name: default
+name: example-pipeline2
 type: docker
 steps:
 - name: build
-  image: worker-game-replication
+  image: node:latest
   privileged: true
   commands:
-    - pip3 install -r requirements.txt
-    - python3 ./main/main.py
+  - npm install
+  - npm run test
   when:
     branch:
-      - master
+    - master
     event:
-      - push
-      - pull-request
+    - push
+    - pull-request
