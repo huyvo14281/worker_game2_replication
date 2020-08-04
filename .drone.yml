@@ -2,11 +2,11 @@ kind: pipeline
 name: default
 type: docker
 steps:
-- name: test
+- name: build
   image: worker-game-replication
   privileged: true
   commands:
-    - pip3 install -r requirement.txt
+    - pip3 install -r requirements.txt
     - python3 ./main/main.py
   when:
     branch:
