@@ -8,7 +8,7 @@ steps:
   - name: dockersock
     path: /var/run/docker.sock
   commands:
-  - docker container ls
+  - docker build .
 
 volumes:
 - name: dockersock
