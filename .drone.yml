@@ -10,7 +10,6 @@ steps:
   commands:
   - docker container ls
   - ls
-  - pwd
 
 volumes:
 - name: dockersock
