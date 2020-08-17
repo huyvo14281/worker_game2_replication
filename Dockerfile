@@ -1,4 +1,4 @@
-FROM registry.meete.xyz/python
+FROM python
 
 ENV COMMAND worker
 
